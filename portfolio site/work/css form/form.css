@@ -1,0 +1,117 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+
+
+.wrap{
+    background: white;
+    margin: 20px auto;
+    max-width: 600px;
+    height: 550px;
+    padding: 40px 0;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+input[type=text],
+input[type=password]{
+    width: 70%;
+    /* height: 50%; */
+    padding: 13px 20px;
+    display: block;
+    margin: 20px 70px;
+    border: 2px solid black;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 800;
+}
+
+
+
+input[type=submit]{
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding: 10px 200px;
+    display: block;
+    margin: 7px 70px;
+    background-color: blue;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.pk p{
+    display: block;
+    float: left;
+    margin: 12px 80px;
+    color: black;
+}
+p{
+    display: block;
+    color: black;
+    margin-right: 80px;
+    float: right;
+
+}
+
+.ok{
+    display: block;
+    margin-top: 30px;
+}
+
+input[type=for]{
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 10px 180px;
+    margin: 7px 20px;
+    display: block;
+    background-color: red;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+input[type=do]{
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding: 10px 180px;
+    margin: 7px 20px;
+    display: block;
+    background-color: blue;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+body{
+    background-image: url(./media/1000000280.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+
+
+.on{
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+
+hr{
+    margin: 12px 50px;
+    padding: auto 120px;
+    max-width: 2000px;
+    width: 500px;
+}
+
