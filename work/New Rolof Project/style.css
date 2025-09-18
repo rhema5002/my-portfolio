@@ -1,0 +1,519 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poopins', sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+:root{
+    --body-color:rgb(255,255,255);
+    --primary-color:blue;
+    --primary-color-light:#fff;
+    --toggle-color:#ddd;
+    --text-color:#000;
+    --nav-color-small-screen:rgb(123, 119, 119);
+}
+
+body{
+    background:var(--body-color);
+    min-height: 100vh;
+}
+
+
+body.dark{
+    --body-color:rgb(24,25,26);
+    --primary-color:rgb(192, 124,8);
+    --primary-color-light:#fff;
+    --toggle-color:#fff;
+    --text-color:#fff;
+    --nav-color-small-screen:#202122;
+}
+
+.text{
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nav-container nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.6rem 10vh;
+    box-shadow: 0 2px 5px 0px rgba(112, 112, 112, 0.1);
+    position: relative;
+}
+
+.nav-container nav .nav-items{
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-container nav .logo{
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: 5px;
+    font-size: 2rem;
+}
+
+
+.nav-items .nav-link{
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    transition: ease-in 250ms;
+    text-transform: capitalize;
+}
+
+.nav-items .nav-link:hover{
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+
+nav .mode{
+    display: flex;
+    position: relative;
+    align-self: center;
+    height: 100%;
+}
+
+nav .mode .moon-icon,
+nav .mode .sun-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -17px;
+    transition: 0.3s;
+    background: var(--primary-color);
+    border-radius: 5px;
+    padding: 0.2rem 0.9rem;
+    cursor: pointer;
+
+}
+
+
+nav .mode .icon{
+    font: 1.4rem;
+    color: var(--primary-color-light);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 100%;
+    gap: 1.2rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+.main h3{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.main .button a{
+    border: none;
+    outline: none;
+    background: var(--primary-color);
+    padding: 0.8rem 1.3rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: var(--primary-color-light);
+}
+
+
+nav .mode .sun-icon{
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.dark nav .mode .sun-icon{
+    visibility: visible;
+    opacity: 1;
+}
+
+body.dark nav .mode .moon-icon{
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+
+@media(max-width: 768px){
+    .nav-container nav{
+        padding: 0.6rem 2vw;
+    }
+nav .logo{
+    font-size: 1rem;
+}
+
+.nav-container nav .nav-items{
+    position: absolute;
+    flex-direction: column;
+    top: 50px;
+    background: var(--nav-color-small-screen);
+    width: 100%;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 3rem;
+    height: 0;
+    overflow: hidden;
+    transition: ease-out 250ms;
+    z-index: 99;
+    visibility: hidden;
+}
+
+nav .toggle{
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: auto;
+    gap: 0.4rem;
+    padding: 0.2rem;
+}
+
+nav .toggle .bars{
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    border: 10px;
+    cursor: pointer;
+    transition: ease-in 250ms;
+}
+
+.nav-container nav .nav-items.navisActive{
+    top: 60px;
+    height: 70vh;
+    opacity: 1;
+    visibility: visible;
+    overflow-y: auto;
+}
+ .toggle.toggleActive .bars:nth-child(1){
+    transform: translateY(9px) rotate(50deg);
+}
+.toggle.toggleActive .bars:nth-child(2){
+    opacity: 0;
+}
+.toggle.toggleActive .bars:nth-child(3){
+    transform: translateY(-9px) rotate(-50deg);
+} 
+
+.text{
+    color: var(--text-color);
+}
+
+.nav-container nav .mode{
+    margin-top: 8px;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+@media(max-width: 768px){
+    .nav-container nav{
+        padding: 0.6rem 2vw;
+    }
+
+    nav .logo{
+        font-size: 1rem;
+    }
+
+    .nav-container nav .nav-items{
+        position: absolute;
+        flex-direction: column;
+        top: 50px;
+        background: var(--nav-color-small-screen);
+        width: 100%;
+        justify-content: flex-start;
+         align-items: center; 
+         gap: 3rem;
+         padding-top: 3rem;
+         height: 0;
+         overflow: hidden;
+         transition: ease-out 250ms;
+         z-index: 99;
+         visibility: hidden;
+        
+    }
+
+    nav .toggle{
+        display: flex;
+        flex-direction: column;
+        width: 40px;
+        height: auto;
+        gap: 0.4rem;
+        padding: 0.2rem;
+    }
+
+nav .toggle .bars{
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    cursor: pointer;
+    border: 10px;
+    transition: ease-in 250ms;
+}
+.nav-container nav .nav-items.navisActive{
+    top: 60px;
+    height: 70vh;
+    opacity: 1;
+    visibility: visible;
+    overflow-y: auto;
+}
+
+.toggle.toggleActive .bars:nth-child(1){
+    transform: translateY(9px) rotate(50deg);
+}
+
+.toggle.toggleActive .bars:nth-child(3){
+    transform: translateY(-9px) rotate(-50deg);
+}
+.toggle.toggleActive .bars:nth-child(2){
+    opacity:0 ;
+}
+
+.nav-container nav .mode{
+    margin-top: 8px;
+}
+
+.text{
+    color: var(--primary-color-light);
+}
+.main h3{
+    color: var(--text-color);
+}
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
